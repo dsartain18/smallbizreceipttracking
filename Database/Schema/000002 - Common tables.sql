@@ -2,37 +2,37 @@ BEGIN TRANSACTION
 
 CREATE TABLE Common.MimeTypes
 (
-	MimeTypeID INT NOT NULL Primary Key,
+	MimeTypeID INT IDENTITY(1,1) NOT NULL Primary Key,
 	MimeTypeDesc VARCHAR(100) NOT NULL,
 	MimeTypeExt VARCHAR(100) NOT NULL
 );
 
 Create Table Common.Blobs
 (
-	BlobID INT NOT NULL Primary Key,
+	BlobID INT IDENTITY(1,1) NOT NULL Primary Key,
 	Blob VARBINARY(MAX) NOT NULL,
 	MimeTypeID INT NOT NULL
 );
 
 Create Table Common.Addresses
 (
-	AddressID INT NOT NULL Primary Key,
+	AddressID INT IDENTITY(1,1) NOT NULL Primary Key,
 	AddressLine1 VARCHAR(50) NOT NULL,
 	AddressLine2 VARCHAR(50) NULL,
 	City VARCHAR(50) NOT NULL,
-	State CHAR(2) NOT NULL,
+	StateCode CHAR(2) NOT NULL,
 	ZipCode VARCHAR(10) NOT NULL
 );
 
 Create Table Common.PhoneTypes
 (
-	PhoneTypeID INT NOT NULL Primary Key,
+	PhoneTypeID INT IDENTITY(1,1) NOT NULL Primary Key,
 	PhoneTypeDesc VARCHAR(20) NOT NULL
 );
 
 Create Table Common.EmailTypes
 (
-	EmailTypeID INT NOT NULL Primary Key,
+	EmailTypeID INT IDENTITY(1,1) NOT NULL Primary Key,
 	EmailTypeDesc VARCHAR(20) NOT NULL
 );
 

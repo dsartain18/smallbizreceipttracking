@@ -2,7 +2,7 @@ BEGIN TRANSACTION
 
 Create Table Users.Users
 (
-	UserID INT NOT NULL Primary Key,
+	UserID INT IDENTITY(1,1) NOT NULL Primary Key,
 	FirstName VARCHAR(50) NOT NULL,
 	LastName VARCHAR(50) NOT NULL,
 	AddressID INT NOT NULL,
@@ -13,7 +13,7 @@ GO
 
 Create Table Users.UserPhones
 (
-	UserPhoneID INT NOT NULL Primary Key,
+	UserPhoneID INT IDENTITY(1,1) NOT NULL Primary Key,
 	UserPhoneType INT NOT NULL, 
 	UserID INT NOT NULL,
 	UserPhoneNumber VARCHAR(255) NOT NULL
@@ -22,7 +22,7 @@ GO
 
 Create Table Users.UserEmails
 (
-	UserEmailID INT NOT NULL Primary Key,
+	UserEmailID INT IDENTITY(1,1) NOT NULL Primary Key,
 	UserEmailType INT NOT NULL,
 	UserID INT NOT NULL,
 	UserEmailAddress VARCHAR(255) NOT NULL

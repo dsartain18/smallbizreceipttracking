@@ -2,7 +2,7 @@ BEGIN TRANSACTION
 
 Create Table Companies.Companies
 (
-	CompanyID INT NOT NULL Primary Key,
+	CompanyID INT IDENTITY(1,1) NOT NULL Primary Key,
 	CompanyName VARCHAR(255) NOT NULL,
 	AddressID INT NOT NULL
 );
@@ -10,7 +10,7 @@ GO
 
 Create Table Companies.CompanyPhones
 (
-	CompanyPhoneID INT NOT NULL Primary Key,
+	CompanyPhoneID INT IDENTITY(1,1) NOT NULL Primary Key,
 	CompanyPhoneType INT NOT NULL,
 	CompanyID INT NOT NULL,
 	CompanyPhoneNumber VARCHAR(50)
@@ -19,7 +19,7 @@ GO
 
 Create Table Companies.CompanyEmails
 (
-	CompanyEmailID INT NOT NULL Primary Key,
+	CompanyEmailID INT IDENTITY(1,1) NOT NULL Primary Key,
 	CompanyEmailType INT NOT NULL,
 	CompanyID INT NOT NULL,
 	CompanyEmailAddress VARCHAR(255) NOT NULL

@@ -2,7 +2,7 @@ BEGIN TRANSACTION
 
 Create Table RTS.Receipts
 (
-	ReceiptID INT NOT NULL Primary Key,
+	ReceiptID INT IDENTITY(1,1) NOT NULL Primary Key,
 	CompanyID INT NOT NULL,
 	UploadedByUserID INT NOT NULL,
 	BlobID INT NOT NULL,
