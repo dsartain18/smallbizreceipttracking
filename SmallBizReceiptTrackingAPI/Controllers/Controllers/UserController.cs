@@ -47,7 +47,8 @@ namespace SmallBizReceiptTrackingAPI.Controllers.Controllers
         /// Gets a list of users
         /// </summary>
         /// <returns>List of UserDTO objects</returns>
-        [Route("Get")]
+        [Route("GetUsers")]
+        [HttpGet]
         public HttpResponseMessage GetUsers()
         {
             List<UserDTO> userDTOList = null;

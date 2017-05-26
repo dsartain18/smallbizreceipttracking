@@ -20,7 +20,7 @@ namespace SmallBizReceiptTrackingAPI.DependencyResolution
         protected override void Configure()
         {
             CreateMap<DBUser, UserEntity>();
-            CreateMap<UserDTO, UserEntity>();
+            CreateMap<UserDTO, UserEntity>().ReverseMap();
         }
     }
 }

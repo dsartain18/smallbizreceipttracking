@@ -4,6 +4,10 @@ using AutoMapper;
 using Ninject.Modules;
 
 using SmallBizReceiptTrackingAPI.Entities.Entities;
+using SmallBizReceiptTrackingAPI.Managers.Interfaces;
+using SmallBizReceiptTrackingAPI.Managers.Managers;
+using SmallBizReceiptTrackingAPI.Repositories.Interfaces;
+using SmallBizReceiptTrackingAPI.Repositories.Repositories;
 
 namespace SmallBizReceiptTrackingAPI.DependencyResolution
 {
@@ -38,8 +42,8 @@ namespace SmallBizReceiptTrackingAPI.DependencyResolution
             var mapper = automapperConfig.CreateMapper();
 
             Bind<IMapper>().ToConstant(mapper).InSingletonScope();
-
-            
+            Bind<IUserManager>().To<UserManager>().InTransientScope();
+            Bind<IUserRepository>().To<UserRepository>().InTransientScope();
         }
     }
 }
