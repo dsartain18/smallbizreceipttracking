@@ -1,0 +1,2 @@
+"../packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" -register -target:"../packages\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:"\"C:\Repository\Small Biz Receipt Tracking\trunk\SmallBizReceiptTrackingAPI\UnitTests\bin\Debug\SmallBizReceiptTrackingAPI.UnitTests.dll\"" -filter:"+[*]*" -mergebyhash -output:./CodeCoverageResults/ProjectCoverageReport.xml 
+"../packages\ReportGenerator.2.5.8\tools\ReportGenerator.exe" -reports:"./CodeCoverageResults/ProjectCoverageReport.xml" -targetdir:"./CodeCoverageResults"
