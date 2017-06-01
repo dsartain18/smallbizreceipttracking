@@ -15,6 +15,24 @@ namespace SmallBizReceiptTrackingAPI.UnitTests.Managers
     public class UserManagerTests
     {
         [Fact]
+        public void Constructor_Negative_NullUserRepository()
+        {
+            // ARRANGE
+            const string EXCEPTION_PARAM = "userRepository";
+            IUserRepository fakeUserRepository = null;
+            ArgumentNullException actualException = null;
+
+            UserManager tester = null;
+
+            // ACT
+            actualException = Assert.Throws<ArgumentNullException>(() => tester = new UserManager(fakeUserRepository)) as ArgumentNullException;
+
+            // ASSERT
+            Assert.NotNull(actualException);
+            Assert.Equal(EXCEPTION_PARAM, actualException.ParamName);
+        }
+
+        [Fact]
         public void GetUsers_Positive_Good()
         {
             // ARRANGE

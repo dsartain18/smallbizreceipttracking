@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{188BE367-0CD5-41DA-8CCF-9EC8C331425A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Coverage", "Code Coverage", "{BF74E9C2-D095-43B7-942B-E9D42F89F377}"
+	ProjectSection(SolutionItems) = preProject
+		CodeCoverage\UnitTests.bat = CodeCoverage\UnitTests.bat
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{D93F995E-AC8D-418E-AFCA-DC20AB2BC5AB}"
 EndProject
