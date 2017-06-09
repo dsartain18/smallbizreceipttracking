@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{188BE367
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Coverage", "Code Coverage", "{BF74E9C2-D095-43B7-942B-E9D42F89F377}"
 	ProjectSection(SolutionItems) = preProject
+		CodeCoverage\AllTests.bat = CodeCoverage\AllTests.bat
+		CodeCoverage\IntegrationTests.bat = CodeCoverage\IntegrationTests.bat
 		CodeCoverage\UnitTests.bat = CodeCoverage\UnitTests.bat
 	EndProjectSection
 EndProject

@@ -21,6 +21,11 @@ namespace SmallBizReceiptTrackingAPI.Entities.Entities
         public bool ShouldWatchLog4NetConfigurationFile { get; protected set; }
 
         /// <summary>
+        /// The key used to validate traffic to the API
+        /// </summary>
+        public string APIKey { get; protected set; }
+
+        /// <summary>
         /// Constructs a new instance of the ConfigurationSettingsEntity class. Validates configuration settings.
         /// </summary>
         /// <param name="configurationSettings">Configuration settings to validate and set</param>
@@ -30,6 +35,8 @@ namespace SmallBizReceiptTrackingAPI.Entities.Entities
             {
                 throw new ArgumentNullException("configurationSettings");
             }
+
+            APIKey = ValidateStringSetting("APIKey", configurationSettings["APIKey"]);
 
             // Validate Log4Net settings
             //Log4NetConfigurationFile = ValidateFileSetting("log4NetConfigurationFile", configurationSettings["log4NetConfigurationFile"]);

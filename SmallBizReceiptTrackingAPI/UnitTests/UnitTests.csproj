@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ConfigurationEntityTests.cs" />
     <Compile Include="Managers\UserManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepositoryTests.cs" />

@@ -1,0 +1,4 @@
+"../packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" -register -target:"../packages\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetdir:"../UnitTests\bin\Debug/" -targetargs:"SmallBizReceiptTrackingAPI.UnitTests.dll" -filter:"+[SmallBizReceiptTrackingAPI*]* -[*UnitTests*]*" -mergebyhash -output:./CodeCoverageResults/ProjectCoverageReport.xml 
+"../packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" -register -target:"../packages\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetdir:"../IntegrationTests\bin\Debug/" -targetargs:"SmallBizReceiptTrackingAPI.IntegrationTests.dll" -filter:"+[SmallBizReceiptTrackingAPI*]* -[*IntegrationTests*]*" -mergebyhash -mergeoutput -output:./CodeCoverageResults/ProjectCoverageReport.xml 
+"../packages\ReportGenerator.2.5.8\tools\ReportGenerator.exe" -reports:"./CodeCoverageResults/ProjectCoverageReport.xml" -targetdir:"./CodeCoverageResults"
+"./CodeCoverageResults/index.htm"
