@@ -15,12 +15,19 @@ namespace SmallBizReceiptTrackingAPI.Repositories.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
+    /// <summary>
+    /// SmallBizReceiptTrackingEntities data object
+    /// </summary>
     public partial class SmallBizReceiptTrackingEntities : DbContext
     {
+    	/// <summary>
+    	/// Constructs a new instance of the SmallBizReceiptTrackingEntities object
+    	/// </summary>
         public SmallBizReceiptTrackingEntities()
             : base("name=SmallBizReceiptTrackingEntities")
         {
         }
+    	
     
         internal virtual ObjectResult<DBUser> GetUsers()
         {

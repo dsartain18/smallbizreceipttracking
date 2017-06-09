@@ -53,8 +53,14 @@ using System.Linq;
 }
 #>
 
+/// <summary>
+/// SmallBizReceiptTrackingEntities data object
+/// </summary>
 <#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : DbContext
 {
+	/// <summary>
+	/// Constructs a new instance of the SmallBizReceiptTrackingEntities object
+	/// </summary>
     public <#=code.Escape(container)#>()
         : base("name=<#=container.Name#>")
     {
@@ -79,12 +85,7 @@ foreach (var entitySet in container.BaseEntitySets.OfType<EntitySet>())
 }
 #>
     }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
-
+	
 <#
     foreach (var entitySet in container.BaseEntitySets.OfType<EntitySet>())
     {
