@@ -22,12 +22,6 @@ namespace SmallBizReceiptTrackingAPI.Repositories.Models
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
-    
         internal virtual ObjectResult<DBUser> GetUsers()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DBUser>("GetUsers");
