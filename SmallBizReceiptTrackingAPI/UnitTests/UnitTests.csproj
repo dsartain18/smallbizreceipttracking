@@ -49,6 +49,10 @@
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -75,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolution\DependencyRegistrarTests.cs" />
     <Compile Include="Entities\ConfigurationEntityTests.cs" />
     <Compile Include="Managers\UserManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +100,10 @@
     <ProjectReference Include="..\DataTransfer\DataTransfer.csproj">
       <Project>{a141b7ba-4be7-430d-84d2-1ef9be4b354c}</Project>
       <Name>DataTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DependencyResolution\DependencyResolution.csproj">
+      <Project>{c8bbb296-92d1-417b-8bb7-689f1dc427c5}</Project>
+      <Name>DependencyResolution</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{f6c583eb-8d82-4cc4-9edf-e04f251b2244}</Project>

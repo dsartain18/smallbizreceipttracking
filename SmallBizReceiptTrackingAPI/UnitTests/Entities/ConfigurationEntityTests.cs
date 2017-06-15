@@ -18,6 +18,8 @@ namespace SmallBizReceiptTrackingAPI.UnitTests.Entities
 
             NameValueCollection fakeValues = new NameValueCollection();
             fakeValues.Add("APIKey", "6CB7E1F1-B10D-4935-8253-A83E11021F43");
+            fakeValues.Add("log4NetConfigurationFile", @"C:\Repository\Small Biz Receipt Tracking\trunk\SmallBizReceiptTrackingAPI\SmallBizReceiptTrackingAPI\bin\log4net.config");
+            fakeValues.Add("shouldWatchLog4NetConfigurationFile", "true");
 
             // ACT
             tester = new ConfigurationSettingsEntity(fakeValues);

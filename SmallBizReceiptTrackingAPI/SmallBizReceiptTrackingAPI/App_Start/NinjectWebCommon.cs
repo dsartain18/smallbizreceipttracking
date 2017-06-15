@@ -54,8 +54,7 @@ namespace SmallBizReceiptTrackingAPI.SmallBizReceiptTrackingAPI.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
-                RegisterServices(kernel);
+                
                 GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);                
                 return kernel;
             }
@@ -64,14 +63,6 @@ namespace SmallBizReceiptTrackingAPI.SmallBizReceiptTrackingAPI.App_Start
                 kernel.Dispose();
                 throw;
             }
-        }
-
-        /// <summary>
-        /// Load your modules or register your services here!
-        /// </summary>
-        /// <param name="kernel">The kernel.</param>
-        private static void RegisterServices(IKernel kernel)
-        {
-        }
+        }        
     }
 }
